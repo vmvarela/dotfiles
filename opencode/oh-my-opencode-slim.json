@@ -1,0 +1,88 @@
+{
+  "preset": "optimum",
+  "presets": {
+    "optimum": {
+      "orchestrator": {
+        "model": [
+          "github-copilot/claude-sonnet-4.6",
+          "github-copilot/gpt-5.3-codex",
+          "opencode-go/qwen3.6-plus",
+          "opencode-go/qwen3.5-plus",
+          "github-copilot/gpt-5-mini"
+        ],
+        "variant": "high",
+        "skills": ["*"],
+        "mcps": ["*"]
+      },
+      "oracle": {
+        "model": [
+          "opencode-go/deepseek-v4-pro",
+          "github-copilot/gpt-5.3-codex",
+          "github-copilot/claude-sonnet-4.6",
+          "opencode-go/qwen3.6-plus"
+        ],
+        "variant": "medium",
+        "skills": ["simplify"],
+        "mcps": []
+      },
+      "librarian": {
+        "model": [
+          "opencode-go/minimax-m2.7",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/deepseek-v4-flash",
+          "github-copilot/gpt-5-mini"
+        ],
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": [
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/glm-5.1",
+          "github-copilot/claude-haiku-4.5"
+        ],
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": [
+          "github-copilot/gemini-3.5-flash",
+          "github-copilot/gemini-3.1-pro-preview",
+          "github-copilot/gemini-2.5-pro",
+          "github-copilot/claude-sonnet-4.6"
+        ],
+        "variant": "medium",
+        "skills": ["agent-browser"],
+        "mcps": []
+      },
+      "fixer": {
+        "model": [
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/kimi-k2.6",
+          "opencode-go/mimo-v2.5-pro",
+          "opencode-go/qwen3.6-plus",
+          "opencode-go/deepseek-v4-flash",
+          "github-copilot/gpt-5.3-codex",
+          "github-copilot/gpt-5-mini"
+        ],
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "council": {
+        "model": [
+          "github-copilot/claude-sonnet-4.6",
+          "github-copilot/gpt-5.3-codex",
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/qwen3.6-plus"
+        ],
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      }
+    }
+  }
+}
