@@ -1,88 +1,112 @@
 {
-  "preset": "optimum",
+  "preset": "my-mix",
   "presets": {
-    "optimum": {
+    "my-mix": {
       "orchestrator": {
-        "model": [
-          "github-copilot/claude-sonnet-4.6",
-          "github-copilot/gpt-5.3-codex",
-          "opencode-go/qwen3.6-plus",
-          "opencode-go/qwen3.5-plus",
-          "github-copilot/gpt-5-mini"
+        "model": "opencode-go/qwen3.6-plus",
+        "variant": "low",
+        "skills": [
+          "*"
         ],
-        "variant": "high",
-        "skills": ["*"],
-        "mcps": ["*"]
+        "mcps": []
       },
       "oracle": {
-        "model": [
-          "opencode-go/deepseek-v4-pro",
-          "github-copilot/gpt-5.3-codex",
-          "github-copilot/claude-sonnet-4.6",
-          "opencode-go/qwen3.6-plus"
-        ],
-        "variant": "medium",
-        "skills": ["simplify"],
+        "model": "opencode-go/glm-5.1",
+        "variant": "high",
+        "skills": [],
         "mcps": []
       },
       "librarian": {
-        "model": [
-          "opencode-go/minimax-m2.7",
-          "opencode-go/kimi-k2.6",
-          "opencode-go/deepseek-v4-flash",
-          "github-copilot/gpt-5-mini"
-        ],
+        "model": "opencode-go/minimax-m2.5",
         "variant": "low",
         "skills": [],
-        "mcps": ["websearch", "context7", "grep_app"]
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
       },
       "explorer": {
-        "model": [
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/kimi-k2.6",
-          "opencode-go/glm-5.1",
-          "github-copilot/claude-haiku-4.5"
-        ],
+        "model": "opencode-go/minimax-m2.7",
         "variant": "low",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": [
-          "github-copilot/gemini-3.5-flash",
-          "github-copilot/gemini-3.1-pro-preview",
-          "github-copilot/gemini-2.5-pro",
-          "github-copilot/claude-sonnet-4.6"
-        ],
+        "model": "github-copilot/gemini-3.1-pro-preview",
         "variant": "medium",
-        "skills": ["agent-browser"],
+        "skills": [
+          "agent-browser"
+        ],
         "mcps": []
       },
       "fixer": {
-        "model": [
-          "opencode-go/deepseek-v4-pro",
-          "opencode-go/kimi-k2.6",
-          "opencode-go/mimo-v2.5-pro",
-          "opencode-go/qwen3.6-plus",
-          "opencode-go/deepseek-v4-flash",
-          "github-copilot/gpt-5.3-codex",
-          "github-copilot/gpt-5-mini"
-        ],
-        "variant": "low",
-        "skills": [],
-        "mcps": []
-      },
-      "council": {
-        "model": [
-          "github-copilot/claude-sonnet-4.6",
-          "github-copilot/gpt-5.3-codex",
-          "opencode-go/deepseek-v4-pro",
-          "opencode-go/qwen3.6-plus"
-        ],
-        "variant": "medium",
+        "model": "opencode-go/minimax-m2.7",
+        "variant": "high",
         "skills": [],
         "mcps": []
       }
+    }
+  },
+  "multiplexer": {
+    "type": "auto",
+    "layout": "main-vertical",
+    "main_pane_size": 60
+  },
+  "council": {
+    "master": {
+      "model": "opencode-go/qwen3.7-max"
+    },
+    "presets": {
+      "default": {
+        "alpha": {
+          "model": "github-copilot/claude-sonnet-4.6"
+        },
+        "beta": {
+          "model": "opencode-go/glm-5.1"
+        },
+        "gamma": {
+          "model": "github-copilot/gemini-3.1-pro-preview"
+        }
+      }
+    }
+  },
+  "fallback": {
+    "enabled": true,
+    "timeoutMs": 20000,
+    "retryDelayMs": 500,
+    "chains": {
+      "orchestrator": [
+        "opencode-go/qwen3.7-max",
+        "github-copilot/gpt-5-mini"
+      ],
+      "oracle": [
+        "opencode-go/kimi-k2.5",
+        "github-copilot/claude-sonnet-4.6"
+      ],
+      "designer": [
+        "opencode-go/kimi-k2.5",
+        "github-copilot/gpt-5-mini"
+      ],
+      "fixer": [
+        "opencode-go/glm-5.1",
+        "github-copilot/gpt-5-mini"
+      ],
+      "librarian": [
+        "opencode-go/qwen3.6-plus",
+        "github-copilot/gpt-5-mini"
+      ],
+      "explorer": [
+        "opencode-go/kimi-k2.5",
+        "github-copilot/gpt-5-mini"
+      ],
+      "council-master": [
+        "opencode-go/glm-5.1"
+      ],
+      "councillor": [
+        "opencode-go/kimi-k2.5",
+        "github-copilot/gpt-5-mini"
+      ]
     }
   }
 }
