@@ -1,112 +1,105 @@
 {
-  "preset": "my-mix",
-  "presets": {
-    "my-mix": {
-      "orchestrator": {
-        "model": "opencode-go/qwen3.6-plus",
-        "variant": "low",
-        "skills": [
-          "*"
-        ],
-        "mcps": []
-      },
-      "oracle": {
-        "model": "opencode-go/glm-5.1",
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      },
-      "librarian": {
-        "model": "opencode-go/minimax-m2.5",
-        "variant": "low",
-        "skills": [],
-        "mcps": [
-          "websearch",
-          "context7",
-          "grep_app"
-        ]
-      },
-      "explorer": {
-        "model": "opencode-go/minimax-m2.7",
-        "variant": "low",
-        "skills": [],
-        "mcps": []
-      },
-      "designer": {
-        "model": "github-copilot/gemini-3.1-pro-preview",
-        "variant": "medium",
-        "skills": [
-          "agent-browser"
-        ],
-        "mcps": []
-      },
-      "fixer": {
-        "model": "opencode-go/minimax-m2.7",
-        "variant": "high",
-        "skills": [],
-        "mcps": []
-      }
-    }
-  },
-  "multiplexer": {
-    "type": "auto",
-    "layout": "main-vertical",
-    "main_pane_size": 60
-  },
-  "council": {
-    "master": {
-      "model": "opencode-go/qwen3.7-max"
-    },
+    "preset": "copilot-go",
     "presets": {
-      "default": {
-        "alpha": {
-          "model": "github-copilot/claude-sonnet-4.6"
+        "copilot-go-eco": {
+            "orchestrator": {
+                "model": "github-copilot/claude-sonnet-4.6",
+                "skills": ["*"],
+                "mcps": ["*", "!context7"]
+            },
+            "oracle": {
+                "model": "github-copilot/claude-opus-4.8",
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "council": { "model": "github-copilot/gpt-5.5" },
+            "librarian": {
+                "model": "opencode/deepseek-v4-flash-free",
+                "variant": "low",
+                "skills": [],
+                "mcps": ["websearch", "context7", "grep_app"]
+            },
+            "explorer": {
+                "model": "opencode/deepseek-v4-flash-free",
+                "variant": "low",
+                "skills": [],
+                "mcps": []
+            },
+            "designer": {
+                "model": "github-copilot/gemini-2.5-pro",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": "opencode-go/deepseek-v4-flash",
+                "variant": "medium",
+                "skills": [],
+                "mcps": []
+            }
         },
-        "beta": {
-          "model": "opencode-go/glm-5.1"
-        },
-        "gamma": {
-          "model": "github-copilot/gemini-3.1-pro-preview"
+        "copilot-go": {
+            "orchestrator": {
+                "model": "github-copilot/claude-sonnet-4.6",
+                "skills": ["*"],
+                "mcps": ["*", "!context7"]
+            },
+            "oracle": {
+                "model": "github-copilot/claude-opus-4.8",
+                "variant": "high",
+                "skills": [],
+                "mcps": []
+            },
+            "council": { "model": "github-copilot/gpt-5.5" },
+            "librarian": {
+                "model": "opencode-go/deepseek-v4-flash",
+                "variant": "low",
+                "skills": [],
+                "mcps": ["websearch", "context7", "grep_app"]
+            },
+            "explorer": {
+                "model": "opencode-go/deepseek-v4-flash",
+                "variant": "low",
+                "skills": [],
+                "mcps": []
+            },
+            "designer": {
+                "model": "github-copilot/gemini-2.5-pro",
+                "skills": [],
+                "mcps": []
+            },
+            "fixer": {
+                "model": "opencode-go/deepseek-v4-flash",
+                "variant": "medium",
+                "skills": [],
+                "mcps": []
+            }
         }
-      }
+    },
+    "multiplexer": {
+        "type": "auto",
+        "layout": "main-vertical",
+        "main_pane_size": 60
+    },
+    "council": {
+        "presets": {
+            "default": {
+                "alpha": {
+                    "model": "github-copilot/gpt-5.5",
+                    "variant": "high"
+                },
+                "beta": {
+                    "model": "opencode-go/kimi-k2.6",
+                    "variant": "high"
+                },
+                "gamma": { "model": "opencode/minimax-m3-free" }
+            }
+        }
+    },
+    "todoContinuation": {
+        "maxContinuations": 50,
+        "cooldownMs": 3000,
+        "autoEnable": false,
+        "autoEnableThreshold": 4
     }
-  },
-  "fallback": {
-    "enabled": true,
-    "timeoutMs": 20000,
-    "retryDelayMs": 500,
-    "chains": {
-      "orchestrator": [
-        "opencode-go/qwen3.7-max",
-        "github-copilot/gpt-5-mini"
-      ],
-      "oracle": [
-        "opencode-go/kimi-k2.5",
-        "github-copilot/claude-sonnet-4.6"
-      ],
-      "designer": [
-        "opencode-go/kimi-k2.5",
-        "github-copilot/gpt-5-mini"
-      ],
-      "fixer": [
-        "opencode-go/glm-5.1",
-        "github-copilot/gpt-5-mini"
-      ],
-      "librarian": [
-        "opencode-go/qwen3.6-plus",
-        "github-copilot/gpt-5-mini"
-      ],
-      "explorer": [
-        "opencode-go/kimi-k2.5",
-        "github-copilot/gpt-5-mini"
-      ],
-      "council-master": [
-        "opencode-go/glm-5.1"
-      ],
-      "councillor": [
-        "opencode-go/kimi-k2.5",
-        "github-copilot/gpt-5-mini"
-      ]
-    }
-  }
 }
