@@ -52,13 +52,13 @@
       },
       "council": { "model": "opencode-go/minimax-m3" },
       "librarian": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "low",
         "skills": [],
         "mcps": ["websearch", "context7", "grep_app"]
       },
       "explorer": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -69,7 +69,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "medium",
         "skills": [],
         "mcps": []
