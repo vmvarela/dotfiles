@@ -45,12 +45,12 @@
         "mcps": ["*", "!context7"]
       },
       "oracle": {
-        "model": "opencode-go/qwen3.7-max",
-        "variant": "high",
+        "model": "opencode-go/deepseek-v4-pro",
+        "variant": "max",
         "skills": [],
         "mcps": []
       },
-      "council": { "model": "opencode-go/minimax-m3" },
+      "council": { "model": "opencode-go/deepseek-v4-pro" },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
         "variant": "low",
@@ -121,14 +121,9 @@
   "council": {
     "presets": {
       "default": {
-        "alpha": {
-          "model": "opencode-go/qwen3.7-plus"
-        },
-        "beta": {
-          "model": "opencode-go/kimi-k2.6",
-          "variant": "high"
-        },
-        "gamma": { "model": "opencode-go/deepseek-v4-pro" }
+        "alpha": { "model": "opencode-go/qwen3.7-plus" },
+        "beta": { "model": "opencode-go/kimi-k2.6" },
+        "gamma": { "model": "opencode-go/minimax-m3" }
       }
     }
   },
