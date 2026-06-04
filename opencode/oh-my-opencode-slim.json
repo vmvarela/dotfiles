@@ -1,5 +1,5 @@
 {
-  "preset": "copilot-go",
+  "preset": "go",
   "presets": {
     "copilot-go-eco": {
       "orchestrator": {
@@ -13,7 +13,7 @@
         "skills": [],
         "mcps": []
       },
-      "council": { "model": "github-copilot/gpt-5.5" },
+      "council": { "model": "opencode-go/minimax-m3" },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
         "variant": "low",
@@ -22,6 +22,43 @@
       },
       "explorer": {
         "model": "opencode/deepseek-v4-flash-free",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "github-copilot/gemini-2.5-pro",
+        "skills": [],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "go": {
+      "orchestrator": {
+        "model": "opencode-go/qwen3.7-plus",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "opencode-go/qwen3.7-max",
+        "variant": "high",
+        "skills": [],
+        "mcps": []
+      },
+      "council": { "model": "opencode-go/minimax-m3" },
+      "librarian": {
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -85,14 +122,13 @@
     "presets": {
       "default": {
         "alpha": {
-          "model": "github-copilot/gpt-5.5",
-          "variant": "high"
+          "model": "opencode-go/qwen3.7-plus"
         },
         "beta": {
           "model": "opencode-go/kimi-k2.6",
           "variant": "high"
         },
-        "gamma": { "model": "opencode/minimax-m3-free" }
+        "gamma": { "model": "opencode-go/deepseek-v4-pro" }
       }
     }
   },
