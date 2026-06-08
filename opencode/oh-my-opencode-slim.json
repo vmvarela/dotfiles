@@ -1,5 +1,5 @@
 {
-  "preset": "go",
+  "preset": "openai-go-eco",
   "presets": {
     "copilot-go-eco": {
       "orchestrator": {
@@ -33,6 +33,43 @@
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "openai-go-eco": {
+      "orchestrator": {
+        "model": "openai/gpt-5.5",
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": "openai/gpt-5.5",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      },
+      "council": { "model": "openai/gpt-5.5" },
+      "librarian": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "openai/gpt-5.5",
+        "skills": [],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -123,7 +160,7 @@
       "default": {
         "alpha": { "model": "opencode-go/qwen3.7-plus" },
         "beta": { "model": "opencode-go/kimi-k2.6" },
-        "gamma": { "model": "opencode-go/minimax-m3" }
+        "gamma": { "model": "opencode-go/minimax-m2.7" }
       }
     }
   },
