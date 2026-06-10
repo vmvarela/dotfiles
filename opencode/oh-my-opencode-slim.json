@@ -50,7 +50,10 @@
         "skills": [],
         "mcps": []
       },
-      "council": { "model": "openai/gpt-5.5" },
+      "council": {
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "high"
+      },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
         "variant": "low",
@@ -64,7 +67,7 @@
         "mcps": []
       },
       "designer": {
-        "model": "openai/gpt-5.5",
+        "model": "github-copilot/gemini-2.5-pro",
         "skills": [],
         "mcps": []
       },
@@ -156,16 +159,17 @@
     "main_pane_size": 60
   },
   "council": {
+    "timeout": 300000,
     "presets": {
       "default": {
-        "alpha": { "model": "opencode-go/qwen3.7-plus" },
-        "beta": { "model": "opencode-go/kimi-k2.6" },
-        "gamma": { "model": "opencode-go/minimax-m2.7" }
+        "alpha": { "model": "opencode/deepseek-v4-flash-free", "variant": "max" },
+        "beta": { "model": "opencode/nemotron-3-ultra-free", "variant": "high" },
+        "gamma": { "model": "opencode/mimo-v2.5-free", "variant": "high" }
       }
     }
   },
   "todoContinuation": {
-    "maxContinuations": 50,
+    "maxContinuations": 15,
     "cooldownMs": 3000,
     "autoEnable": false,
     "autoEnableThreshold": 4
