@@ -116,7 +116,7 @@
         "mcps": []
       },
       "council": {
-        "model": "opencode-go/glm-5.1"
+        "model": "opencode-go/kimi-k2.6"
       },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
@@ -135,12 +135,12 @@
         "mcps": []
       },
       "designer": {
-        "model": "opencode-go/glm-5.1",
+        "model": "opencode-go/minimax-m3",
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -253,8 +253,8 @@
     "presets": {
       "default": {
         "alpha": {
-          "model": "opencode/deepseek-v4-flash-free",
-          "variant": "max"
+          "model": "opencode-go/deepseek-v4-flash",
+          "variant": "high"
         },
         "beta": {
           "model": "opencode/nemotron-3-ultra-free",
