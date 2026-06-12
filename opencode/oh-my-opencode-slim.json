@@ -116,7 +116,7 @@
         "mcps": []
       },
       "council": {
-        "model": "opencode-go/deepseek-v4-pro"
+        "model": "opencode-go/glm-5.1"
       },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
@@ -135,7 +135,7 @@
         "mcps": []
       },
       "designer": {
-        "model": "github-copilot/gemini-2.5-pro",
+        "model": "opencode-go/glm-5.1",
         "skills": [],
         "mcps": []
       },
@@ -189,6 +189,54 @@
       },
       "fixer": {
         "model": "opencode-go/deepseek-v4-flash",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "nvidia": {
+      "orchestrator": {
+        "model": "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+        "skills": [
+          "*"
+        ],
+        "mcps": [
+          "*",
+          "!context7"
+        ]
+      },
+      "oracle": {
+        "model": "nvidia/z-ai/glm-5.1",
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      },
+      "council": {
+        "model": "nvidia/moonshotai/kimi-k2.6"
+      },
+      "librarian": {
+        "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": [
+          "websearch",
+          "context7",
+          "grep_app"
+        ]
+      },
+      "explorer": {
+        "model": "nvidia/deepseek-ai/deepseek-v4-flash",
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": "nvidia/mistralai/mistral-medium-3-instruct",
+        "skills": [],
+        "mcps": []
+      },
+      "fixer": {
+        "model": "nvidia/deepseek-ai/deepseek-v4-flash",
         "variant": "medium",
         "skills": [],
         "mcps": []

@@ -1,27 +1,21 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "oh-my-opencode-slim",
-    "@slkiser/opencode-quota"
-  ],
-  "agent": {
-    "explore": {
-      "disable": true
+    "$schema": "https://opencode.ai/config.json",
+    "plugin": ["oh-my-opencode-slim", "@slkiser/opencode-quota"],
+    "agent": {
+        "explore": {
+            "disable": true
+        },
+        "general": {
+            "disable": true
+        }
     },
-    "general": {
-      "disable": true
+    "experimental": {
+        "quotaToast": {
+            "enableToast": false,
+            "showSessionTokens": true,
+            "enabledProviders": ["copilot", "opencode-go", "openai", "nvidia"],
+            "formatStyle": "grouped",
+            "percentDisplayMode": "used"
+        }
     }
-  },
-  "experimental": {
-    "quotaToast": {
-      "enableToast": false,
-      "showSessionTokens": true,
-      "enabledProviders": [
-        "copilot",
-        "opencode-go"
-      ],
-      "formatStyle": "grouped",
-      "percentDisplayMode": "used"
-    }
-  }
 }
