@@ -1,12 +1,19 @@
 {
     "$schema": "https://opencode.ai/config.json",
     "plugin": ["oh-my-opencode-slim", "@slkiser/opencode-quota"],
+    "default_agent": "plan",
     "agent": {
         "explore": {
             "disable": true
         },
         "general": {
             "disable": true
+        },
+        "plan": {
+            "model": "opencode/nemotron-3-ultra-free"
+        },
+        "build": {
+            "model": "opencode/deepseek-v4-flash-free"
         }
     },
     "experimental": {
