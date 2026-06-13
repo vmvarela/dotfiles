@@ -99,7 +99,7 @@
     },
     "opencode-go": {
       "orchestrator": {
-        "model": "opencode-go/qwen3.7-max",
+        "model": "opencode-go/qwen3.7-plus",
         "skills": [
           "*"
         ],
@@ -109,13 +109,13 @@
         ]
       },
       "oracle": {
-        "model": "opencode-go/deepseek-v4-pro",
+        "model": "opencode/nemotron-3-ultra-free",
         "variant": "max",
         "skills": [],
         "mcps": []
       },
       "council": {
-        "model": "opencode-go/kimi-k2.6"
+        "model": "opencode/deepseek-v4-flash-free"
       },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
@@ -139,7 +139,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode-go/deepseek-v4-flash",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -204,15 +204,15 @@
     "presets": {
       "default": {
         "alpha": {
-          "model": "opencode-go/deepseek-v4-flash",
+          "model": "opencode/mimo-v2.5-free",
           "variant": "high"
         },
         "beta": {
-          "model": "opencode/nemotron-3-ultra-free",
+          "model": "opencode/north-mini-code-free",
           "variant": "high"
         },
         "gamma": {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/big-pickle",
           "variant": "high"
         }
       }
