@@ -1,5 +1,5 @@
 {
-  "preset": "opencode-go",
+  "preset": "github-copilot",
   "presets": {
     "github-copilot": {
       "orchestrator": {
@@ -14,12 +14,11 @@
       },
       "oracle": {
         "model": "github-copilot/claude-opus-4.8",
-        "variant": "max",
         "skills": [],
         "mcps": []
       },
       "council": {
-        "model": "github-copilot/gpt-5.5"
+        "model": "github-copilot/claude-sonnet-4.6"
       },
       "librarian": {
         "model": "opencode/deepseek-v4-flash-free",
