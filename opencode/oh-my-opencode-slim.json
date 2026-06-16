@@ -1,5 +1,5 @@
 {
-  "preset": "github-copilot",
+  "preset": "opencode-go",
   "presets": {
     "github-copilot": {
       "orchestrator": {
