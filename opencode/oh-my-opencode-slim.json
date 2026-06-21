@@ -1,5 +1,11 @@
 {
-  "preset": "opencode-go",
+  "preset": "master",
+  "fallback": {
+    "enabled": true,
+    "timeoutMs": 15000,
+    "retryDelayMs": 500,
+    "retry_on_empty": true
+  },
   "presets": {
     "github-copilot": {
       "orchestrator": {
@@ -21,7 +27,7 @@
         "model": "github-copilot/claude-sonnet-4.6"
       },
       "librarian": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -31,7 +37,7 @@
         ]
       },
       "explorer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -42,7 +48,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -69,7 +75,7 @@
         "model": "openai/gpt-5.5"
       },
       "librarian": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -79,7 +85,7 @@
         ]
       },
       "explorer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -90,7 +96,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -98,7 +104,12 @@
     },
     "opencode-go": {
       "orchestrator": {
-        "model": "opencode-go/qwen3.7-plus",
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "openrouter/nex-agi/nex-n2-pro:free",
+          "opencode-go/qwen3.7-plus"
+        ],
         "skills": [
           "*"
         ],
@@ -108,16 +119,30 @@
         ]
       },
       "oracle": {
-        "model": "opencode/nemotron-3-ultra-free",
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+          "openrouter/openai/gpt-oss-120b:free"
+        ],
         "variant": "max",
         "skills": [],
         "mcps": []
       },
       "council": {
-        "model": "opencode/deepseek-v4-flash-free"
+        "model": [
+          "opencode/big-pickle",
+          "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
+          "opencode/deepseek-v4-flash-free",
+          "opencode-go/deepseek-v4-flash"
+        ]
       },
       "librarian": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-coder:free",
+          "opencode/mimo-v2.5-free",
+          "opencode-go/deepseek-v4-flash"
+        ],
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -127,18 +152,118 @@
         ]
       },
       "explorer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-next-80b-a3b-instruct:free",
+          "opencode/mimo-v2.5-free",
+          "opencode-go/deepseek-v4-flash"
+        ],
         "variant": "low",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "opencode-go/minimax-m3",
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "opencode/big-pickle",
+          "opencode-go/minimax-m3"
+        ],
         "skills": [],
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-coder:free",
+          "opencode/mimo-v2.5-free",
+          "opencode-go/deepseek-v4-flash"
+        ],
+        "variant": "medium",
+        "skills": [],
+        "mcps": []
+      }
+    },
+    "master": {
+      "orchestrator": {
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+          "openrouter/nex-agi/nex-n2-pro:free",
+          "github-copilot/claude-sonnet-4.6",
+          "opencode-go/qwen3.7-plus",
+          "openai/gpt-5.5-pro"
+        ],
+        "skills": ["*"],
+        "mcps": ["*", "!context7"]
+      },
+      "oracle": {
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+          "github-copilot/claude-opus-4.8",
+          "opencode-go/glm-5.2",
+          "openai/gpt-5.5-pro"
+        ],
+        "variant": "max",
+        "skills": [],
+        "mcps": []
+      },
+      "council": {
+        "model": [
+          "opencode/big-pickle",
+          "openrouter/nvidia/nemotron-3-nano-30b-a3b:free",
+          "opencode/deepseek-v4-flash-free",
+          "github-copilot/claude-sonnet-4.6",
+          "opencode-go/deepseek-v4-flash",
+          "openai/gpt-5.5"
+        ]
+      },
+      "librarian": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-coder:free",
+          "opencode/mimo-v2.5-free",
+          "github-copilot/claude-haiku-4.5",
+          "opencode-go/deepseek-v4-flash",
+          "openai/gpt-5.5-mini"
+        ],
+        "variant": "low",
+        "skills": [],
+        "mcps": ["websearch", "context7", "grep_app"]
+      },
+      "explorer": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-next-80b-a3b-instruct:free",
+          "opencode/mimo-v2.5-free",
+          "github-copilot/claude-haiku-4.5",
+          "opencode-go/deepseek-v4-flash",
+          "openai/gpt-5.5-mini"
+        ],
+        "variant": "low",
+        "skills": [],
+        "mcps": []
+      },
+      "designer": {
+        "model": [
+          "opencode/mimo-v2.5-free",
+          "github-copilot/gemini-3.1-pro-preview",
+          "opencode-go/minimax-m3",
+          "openai/gpt-5.5"
+        ],
+        "skills": [],
+        "mcps": []
+      },
+      "fixer": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "openrouter/qwen/qwen3-coder:free",
+          "opencode/mimo-v2.5-free",
+          "github-copilot/gpt-5.3-codex",
+          "opencode-go/deepseek-v4-flash",
+          "openai/gpt-5.5-codex"
+        ],
         "variant": "medium",
         "skills": [],
         "mcps": []
@@ -165,7 +290,7 @@
         "model": "nvidia/moonshotai/kimi-k2.6"
       },
       "librarian": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": [
@@ -175,7 +300,7 @@
         ]
       },
       "explorer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low",
         "skills": [],
         "mcps": []
@@ -186,7 +311,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "medium",
         "skills": [],
         "mcps": []
