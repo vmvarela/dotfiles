@@ -14,11 +14,11 @@
     },
     "plan": {
       "model": "opencode/nemotron-3-ultra-free",
-      "disable": true
+      // "disable": true
     },
     "build": {
       "model": "opencode/deepseek-v4-flash-free",
-      "disable": true
+      // "disable": true
     }
   },
   "experimental": {
