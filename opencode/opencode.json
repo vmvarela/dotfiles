@@ -28,8 +28,7 @@
       "enabledProviders": [
         "copilot",
         "opencode-go",
-        "openai",
-        "nvidia"
+        "openai"
       ],
       "formatStyle": "grouped",
       "percentDisplayMode": "used"
