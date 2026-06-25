@@ -105,8 +105,8 @@
     "opencode-go": {
       "orchestrator": {
         "model": [
-          "opencode-go/qwen3.7-plus",
           "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.7-plus",
           "opencode-go/kimi-k2.6"
         ],
         "skills": [
