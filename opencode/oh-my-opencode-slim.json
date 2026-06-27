@@ -1,43 +1,201 @@
 {
   "preset": "nvidia-free",
-  "fallback": { "enabled": true, "timeoutMs": 30000, "retryDelayMs": 2000, "retry_on_empty": true },
+  "fallback": {
+    "enabled": true,
+    "timeoutMs": 30000,
+    "retryDelayMs": 2000,
+    "retry_on_empty": true
+  },
 
   "presets": {
     "nvidia-free": {
-      "orchestrator": { "model": ["nvidia/deepseek-ai/deepseek-v4-flash", "nvidia/nvidia/nemotron-3-super-120b-a12b", "nvidia/nvidia/nemotron-3-ultra-550b-a55b"] },
-      "oracle": { "model": ["nvidia/nvidia/nemotron-3-ultra-550b-a55b", "nvidia/z-ai/glm-5.1", "nvidia/nvidia/nemotron-3-super-120b-a12b"], "variant": "high" },
-      "council": { "model": ["nvidia/nvidia/nemotron-3-super-120b-a12b", "nvidia/deepseek-ai/deepseek-v4-flash", "nvidia/nvidia/nemotron-3-nano-30b-a3b", "nvidia/meta/llama-3.3-70b-instruct"] },
-      "librarian": { "model": ["nvidia/deepseek-ai/deepseek-v4-flash", "nvidia/nvidia/nemotron-3-nano-30b-a3b", "nvidia/qwen/qwen2.5-coder-32b-instruct"], "variant": "low" },
-      "explorer": { "model": ["nvidia/nvidia/nemotron-3-nano-30b-a3b", "nvidia/deepseek-ai/deepseek-v4-flash", "nvidia/meta/llama-3.3-70b-instruct"], "variant": "low" },
-      "designer": { "model": ["nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning", "nvidia/meta/llama-3.2-90b-vision-instruct", "nvidia/nvidia/nemotron-3-super-120b-a12b"] },
-      "fixer": { "model": ["nvidia/deepseek-ai/deepseek-v4-flash", "nvidia/nvidia/nemotron-3-ultra-550b-a55b", "nvidia/qwen/qwen3-coder-480b-a35b-instruct"], "variant": "medium" }
+      "orchestrator": {
+        "model": [
+          "nvidia/deepseek-ai/deepseek-v4-flash",
+          "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "nvidia/nvidia/nemotron-3-ultra-550b-a55b"
+        ]
+      },
+      "oracle": {
+        "model": [
+          "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "nvidia/z-ai/glm-5.1",
+          "nvidia/nvidia/nemotron-3-super-120b-a12b"
+        ],
+        "variant": "high"
+      },
+      "council": {
+        "model": [
+          "nvidia/nvidia/nemotron-3-super-120b-a12b",
+          "nvidia/deepseek-ai/deepseek-v4-flash",
+          "nvidia/nvidia/nemotron-3-nano-30b-a3b",
+          "nvidia/meta/llama-3.3-70b-instruct"
+        ]
+      },
+      "librarian": {
+        "model": [
+          "nvidia/deepseek-ai/deepseek-v4-flash",
+          "nvidia/nvidia/nemotron-3-nano-30b-a3b",
+          "nvidia/qwen/qwen2.5-coder-32b-instruct"
+        ],
+        "variant": "low"
+      },
+      "explorer": {
+        "model": [
+          "nvidia/nvidia/nemotron-3-nano-30b-a3b",
+          "nvidia/deepseek-ai/deepseek-v4-flash",
+          "nvidia/meta/llama-3.3-70b-instruct"
+        ],
+        "variant": "low"
+      },
+      "designer": {
+        "model": [
+          "nvidia/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+          "nvidia/meta/llama-3.2-90b-vision-instruct",
+          "nvidia/nvidia/nemotron-3-super-120b-a12b"
+        ]
+      },
+      "fixer": {
+        "model": [
+          "nvidia/deepseek-ai/deepseek-v4-flash",
+          "nvidia/nvidia/nemotron-3-ultra-550b-a55b",
+          "nvidia/qwen/qwen3-coder-480b-a35b-instruct"
+        ],
+        "variant": "medium"
+      }
     },
     "opencode-free": {
-      "orchestrator": { "model": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3-ultra-free", "opencode/mimo-v2.5-free", "opencode/north-mini-code-free"] },
-      "oracle": { "model": ["opencode/nemotron-3-ultra-free", "opencode/deepseek-v4-flash-free", "opencode/mimo-v2.5-free"], "variant": "high" },
-      "council": { "model": ["opencode/deepseek-v4-flash-free", "opencode/north-mini-code-free", "opencode/mimo-v2.5-free", "opencode/nemotron-3-ultra-free"] },
-      "librarian": { "model": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3-ultra-free", "opencode/mimo-v2.5-free"], "variant": "low" },
-      "explorer": { "model": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3-ultra-free", "opencode/mimo-v2.5-free"], "variant": "low" },
-      "designer": { "model": ["opencode/mimo-v2.5-free", "opencode/nemotron-3-ultra-free", "opencode/deepseek-v4-flash-free"] },
-      "fixer": { "model": ["opencode/deepseek-v4-flash-free", "opencode/nemotron-3-ultra-free", "opencode/mimo-v2.5-free"], "variant": "medium" }
+      "orchestrator": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "opencode/nemotron-3-ultra-free",
+          "opencode/mimo-v2.5-free",
+          "opencode/north-mini-code-free"
+        ]
+      },
+      "oracle": {
+        "model": [
+          "opencode/nemotron-3-ultra-free",
+          "opencode/deepseek-v4-flash-free",
+          "opencode/mimo-v2.5-free"
+        ],
+        "variant": "high"
+      },
+      "council": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "opencode/north-mini-code-free",
+          "opencode/mimo-v2.5-free",
+          "opencode/nemotron-3-ultra-free"
+        ]
+      },
+      "librarian": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "opencode/nemotron-3-ultra-free",
+          "opencode/mimo-v2.5-free"
+        ],
+        "variant": "low"
+      },
+      "explorer": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "opencode/nemotron-3-ultra-free",
+          "opencode/mimo-v2.5-free"
+        ],
+        "variant": "low"
+      },
+      "designer": {
+        "model": [
+          "opencode/mimo-v2.5-free",
+          "opencode/nemotron-3-ultra-free",
+          "opencode/deepseek-v4-flash-free"
+        ]
+      },
+      "fixer": {
+        "model": [
+          "opencode/deepseek-v4-flash-free",
+          "opencode/nemotron-3-ultra-free",
+          "opencode/mimo-v2.5-free"
+        ],
+        "variant": "medium"
+      }
     },
     "opencode-go": {
-      "orchestrator": { "model": ["opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-plus", "opencode-go/kimi-k2.6"] },
-      "oracle": { "model": ["opencode-go/glm-5.2", "opencode-go/deepseek-v4-pro", "opencode-go/qwen3.7-max"], "variant": "high" },
-      "council": { "model": ["opencode-go/kimi-k2.6", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.6-plus"] },
-      "librarian": { "model": ["opencode-go/deepseek-v4-flash", "opencode-go/qwen3.6-plus", "opencode-go/minimax-m2.7"], "variant": "low" },
-      "explorer": { "model": ["opencode-go/deepseek-v4-flash", "opencode-go/qwen3.6-plus", "opencode-go/minimax-m2.7"], "variant": "low" },
-      "designer": { "model": ["opencode-go/minimax-m3", "opencode-go/mimo-v2.5", "opencode-go/kimi-k2.6"] },
-      "fixer": { "model": ["opencode-go/kimi-k2.7-code", "opencode-go/deepseek-v4-flash", "opencode-go/qwen3.7-plus"], "variant": "medium" }
+      "orchestrator": {
+        "model": [
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.7-plus",
+          "opencode-go/kimi-k2.6"
+        ]
+      },
+      "oracle": {
+        "model": [
+          "opencode-go/glm-5.2",
+          "opencode-go/deepseek-v4-pro",
+          "opencode-go/qwen3.7-max"
+        ],
+        "variant": "high"
+      },
+      "council": {
+        "model": [
+          "opencode-go/kimi-k2.6",
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.6-plus"
+        ]
+      },
+      "librarian": {
+        "model": [
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.6-plus",
+          "opencode-go/minimax-m2.7"
+        ],
+        "variant": "low"
+      },
+      "explorer": {
+        "model": [
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.6-plus",
+          "opencode-go/minimax-m2.7"
+        ],
+        "variant": "low"
+      },
+      "designer": {
+        "model": [
+          "opencode-go/minimax-m3",
+          "opencode-go/mimo-v2.5",
+          "opencode-go/kimi-k2.6"
+        ]
+      },
+      "fixer": {
+        "model": [
+          "opencode-go/kimi-k2.7-code",
+          "opencode-go/deepseek-v4-flash",
+          "opencode-go/qwen3.7-plus"
+        ],
+        "variant": "medium"
+      }
     },
     "github-copilot": {
       "orchestrator": { "model": ["github-copilot/claude-sonnet-4.6"] },
-      "oracle": { "model": ["github-copilot/claude-opus-4.8"], "variant": "high" },
+      "oracle": {
+        "model": ["github-copilot/claude-sonnet-4.6"],
+        "variant": "high"
+      },
       "council": { "model": ["github-copilot/claude-sonnet-4.6"] },
-      "librarian": { "model": ["github-copilot/claude-haiku-4.5"], "variant": "low" },
-      "explorer": { "model": ["github-copilot/claude-haiku-4.5"], "variant": "low" },
+      "librarian": {
+        "model": ["github-copilot/mai-code-1-flash-picker"],
+        "variant": "low"
+      },
+      "explorer": {
+        "model": ["github-copilot/mai-code-1-flash-picker"],
+        "variant": "low"
+      },
       "designer": { "model": ["github-copilot/gemini-3.1-pro-preview"] },
-      "fixer": { "model": ["github-copilot/gpt-5.3-codex"], "variant": "medium" }
+      "fixer": {
+        "model": ["github-copilot/mai-code-1-flash-picker"],
+        "variant": "medium"
+      }
     },
     "openai": {
       "orchestrator": { "model": ["openai/gpt-5.5"] },
@@ -50,7 +208,25 @@
     }
   },
 
-  "multiplexer": { "type": "auto", "layout": "main-vertical", "main_pane_size": 60 },
-  "council": { "timeout": 300000, "presets": { "default": { "alpha": { "model": "opencode/mimo-v2.5-free", "variant": "high" }, "beta": { "model": "opencode/north-mini-code-free", "variant": "high" }, "gamma": { "model": "opencode/big-pickle", "variant": "high" } } } },
-  "todoContinuation": { "maxContinuations": 15, "cooldownMs": 3000, "autoEnable": false, "autoEnableThreshold": 4 }
+  "multiplexer": {
+    "type": "auto",
+    "layout": "main-vertical",
+    "main_pane_size": 60
+  },
+  "council": {
+    "timeout": 300000,
+    "presets": {
+      "default": {
+        "alpha": { "model": "opencode/mimo-v2.5-free", "variant": "high" },
+        "beta": { "model": "opencode/north-mini-code-free", "variant": "high" },
+        "gamma": { "model": "opencode/big-pickle", "variant": "high" }
+      }
+    }
+  },
+  "todoContinuation": {
+    "maxContinuations": 15,
+    "cooldownMs": 3000,
+    "autoEnable": false,
+    "autoEnableThreshold": 4
+  }
 }
