@@ -17,26 +17,28 @@
       "disable": true
     },
     "plan": {
-      "model": "opencode/nemotron-3-ultra-free",
-      // "disable": true
+      "model": "opencode/nemotron-3-ultra-free"
     },
     "build": {
-      "model": "opencode/deepseek-v4-flash-free",
-      // "disable": true
+      "model": "opencode/deepseek-v4-flash-free"
     }
   },
   "experimental": {
     "quotaToast": {
       "enableToast": false,
       "showSessionTokens": true,
-      "enabledProviders": [
-        "copilot",
-        "opencode-go",
-        "openai"
-      ],
+      "enabledProviders": ["copilot", "opencode-go", "openai"],
       "formatStyle": "grouped",
       "percentDisplayMode": "used"
     }
   },
-  "lsp": true
+  "lsp": true,
+  "disabled_providers": ["openrouter"],
+  "mcp": {
+    "engram": {
+      "type": "local",
+      "command": ["/opt/homebrew/bin/engram", "mcp", "--tools=agent"],
+      "enabled": true
+    }
+  }
 }

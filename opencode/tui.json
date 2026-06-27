@@ -6,6 +6,7 @@
     "caveman-opencode-plugin",
     "oh-my-opencode-slim",
     "@tarquinen/opencode-dcp@latest",
-    "openslimedit@latest"
+    "openslimedit@latest",
+    "opencode-subagent-statusline"
   ]
 }
