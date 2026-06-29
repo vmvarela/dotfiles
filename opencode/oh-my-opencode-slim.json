@@ -1,5 +1,5 @@
 {
-  "preset": "nvidia-free",
+  "preset": "opencode-free",
   "fallback": {
     "enabled": true,
     "timeoutMs": 30000,
