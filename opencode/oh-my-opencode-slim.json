@@ -1,5 +1,5 @@
 {
-  "preset": "opencode-free",
+  "preset": "openai",
   "fallback": {
     "enabled": true,
     "timeoutMs": 30000,
@@ -178,29 +178,29 @@
     "github-copilot": {
       "orchestrator": {
         "model": [
-          "github-copilot/claude-sonnet-4.6"
+          "github-copilot/claude-haiku-4.5"
         ]
       },
       "oracle": {
         "model": [
-          "github-copilot/claude-sonnet-4.6"
+          "github-copilot/claude-sonnet-5"
         ],
         "variant": "high"
       },
       "council": {
         "model": [
-          "github-copilot/claude-sonnet-4.6"
+          "github-copilot/claude-sonnet-5"
         ]
       },
       "librarian": {
         "model": [
-          "github-copilot/mai-code-1-flash-picker"
+          "github-copilot/claude-haiku-4.5"
         ],
         "variant": "low"
       },
       "explorer": {
         "model": [
-          "github-copilot/mai-code-1-flash-picker"
+          "github-copilot/claude-haiku-4.5"
         ],
         "variant": "low"
       },
@@ -211,7 +211,7 @@
       },
       "fixer": {
         "model": [
-          "github-copilot/mai-code-1-flash-picker"
+          "github-copilot/claude-haiku-4.5"
         ],
         "variant": "medium"
       }
@@ -219,12 +219,12 @@
     "openai": {
       "orchestrator": {
         "model": [
-          "openai/gpt-5.5"
+          "openai/gpt-5.3-codex"
         ]
       },
       "oracle": {
         "model": [
-          "openai/gpt-5.5-pro"
+          "openai/gpt-5.5"
         ],
         "variant": "high"
       },
@@ -247,12 +247,12 @@
       },
       "designer": {
         "model": [
-          "openai/gpt-5.5"
+          "openai/gpt-5.4-mini-fast"
         ]
       },
       "fixer": {
         "model": [
-          "openai/gpt-5.3-codex"
+          "openai/gpt-5.4-mini-fast"
         ],
         "variant": "medium"
       }
