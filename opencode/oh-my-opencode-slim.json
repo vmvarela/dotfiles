@@ -1,11 +1,6 @@
 {
-  "preset": "openai",
-  "fallback": {
-    "enabled": true,
-    "timeoutMs": 30000,
-    "retryDelayMs": 2000,
-    "retry_on_empty": true
-  },
+  "disabled_agents": [],
+  "preset": "opencode-free",
   "presets": {
     "nvidia-free": {
       "orchestrator": {
@@ -65,218 +60,141 @@
     },
     "opencode-free": {
       "orchestrator": {
-        "model": [
-          "opencode/deepseek-v4-flash-free",
-          "opencode/nemotron-3-ultra-free",
-          "opencode/mimo-v2.5-free",
-          "opencode/north-mini-code-free"
-        ]
-      },
-      "oracle": {
-        "model": [
-          "opencode/nemotron-3-ultra-free",
-          "opencode/deepseek-v4-flash-free",
-          "opencode/mimo-v2.5-free"
-        ],
+        "model": "opencode/nemotron-3-ultra-free",
         "variant": "high"
       },
+      "oracle": {
+        "model": "opencode/nemotron-3-ultra-free",
+        "variant": "max"
+      },
       "council": {
-        "model": [
-          "opencode/deepseek-v4-flash-free",
-          "opencode/north-mini-code-free",
-          "opencode/mimo-v2.5-free",
-          "opencode/nemotron-3-ultra-free"
-        ]
+        "model": "opencode/big-pickle",
+        "variant": "high"
       },
       "librarian": {
-        "model": [
-          "opencode/deepseek-v4-flash-free",
-          "opencode/nemotron-3-ultra-free",
-          "opencode/mimo-v2.5-free"
-        ],
-        "variant": "low"
+        "model": "opencode/nemotron-3-ultra-free",
+        "variant": "medium"
       },
       "explorer": {
-        "model": [
-          "opencode/deepseek-v4-flash-free",
-          "opencode/nemotron-3-ultra-free",
-          "opencode/mimo-v2.5-free"
-        ],
+        "model": "opencode/north-mini-code-free",
         "variant": "low"
       },
       "designer": {
-        "model": [
-          "opencode/mimo-v2.5-free",
-          "opencode/nemotron-3-ultra-free",
-          "opencode/deepseek-v4-flash-free"
-        ]
+        "model": "opencode/mimo-v2.5-free",
+        "variant": "medium"
       },
       "fixer": {
-        "model": [
-          "opencode/deepseek-v4-flash-free",
-          "opencode/nemotron-3-ultra-free",
-          "opencode/mimo-v2.5-free"
-        ],
-        "variant": "medium"
+        "model": "opencode/deepseek-v4-flash-free",
+        "variant": "low"
+      },
+      "observer": {
+        "model": "opencode/mimo-v2.5-free",
+        "variant": "low"
       }
     },
     "opencode-go": {
       "orchestrator": {
-        "model": [
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/qwen3.7-plus",
-          "opencode-go/kimi-k2.6"
-        ]
-      },
-      "oracle": {
-        "model": [
-          "opencode-go/glm-5.2",
-          "opencode-go/deepseek-v4-pro",
-          "opencode-go/qwen3.7-max"
-        ],
+        "model": "opencode-go/glm-5.2",
         "variant": "high"
       },
+      "oracle": {
+        "model": "opencode-go/deepseek-v4-pro",
+        "variant": "max"
+      },
       "council": {
-        "model": [
-          "opencode-go/kimi-k2.6",
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/qwen3.6-plus"
-        ]
+        "model": "opencode-go/mimo-v2.5-pro",
+        "variant": "high"
       },
       "librarian": {
-        "model": [
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/qwen3.6-plus",
-          "opencode-go/minimax-m2.7"
-        ],
-        "variant": "low"
+        "model": "opencode-go/minimax-m3",
+        "variant": "medium"
       },
       "explorer": {
-        "model": [
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/qwen3.6-plus",
-          "opencode-go/minimax-m2.7"
-        ],
+        "model": "opencode-go/mimo-v2.5",
         "variant": "low"
       },
       "designer": {
-        "model": [
-          "opencode-go/minimax-m3",
-          "opencode-go/mimo-v2.5",
-          "opencode-go/kimi-k2.6"
-        ]
+        "model": "opencode-go/kimi-k2.7-code",
+        "variant": "medium"
       },
       "fixer": {
-        "model": [
-          "opencode-go/kimi-k2.7-code",
-          "opencode-go/deepseek-v4-flash",
-          "opencode-go/qwen3.7-plus"
-        ],
-        "variant": "medium"
+        "model": "opencode-go/deepseek-v4-flash",
+        "variant": "low"
+      },
+      "observer": {
+        "model": "opencode-go/kimi-k2.7-code",
+        "variant": "low"
       }
     },
     "github-copilot": {
       "orchestrator": {
-        "model": [
-          "github-copilot/claude-haiku-4.5"
-        ]
+        "model": ["github-copilot/claude-haiku-4.5"]
       },
       "oracle": {
-        "model": [
-          "github-copilot/claude-sonnet-5"
-        ],
+        "model": ["github-copilot/claude-sonnet-5"],
         "variant": "high"
       },
       "council": {
-        "model": [
-          "github-copilot/claude-sonnet-5"
-        ]
+        "model": ["github-copilot/claude-sonnet-5"]
       },
       "librarian": {
-        "model": [
-          "github-copilot/claude-haiku-4.5"
-        ],
+        "model": ["github-copilot/claude-haiku-4.5"],
         "variant": "low"
       },
       "explorer": {
-        "model": [
-          "github-copilot/claude-haiku-4.5"
-        ],
+        "model": ["github-copilot/claude-haiku-4.5"],
         "variant": "low"
       },
       "designer": {
-        "model": [
-          "github-copilot/gemini-3.1-pro-preview"
-        ]
+        "model": ["github-copilot/gemini-3.1-pro-preview"]
       },
       "fixer": {
-        "model": [
-          "github-copilot/claude-haiku-4.5"
-        ],
+        "model": ["github-copilot/claude-haiku-4.5"],
         "variant": "medium"
       }
     },
     "openai": {
       "orchestrator": {
-        "model": [
-          "openai/gpt-5.3-codex"
-        ]
+        "model": ["openai/gpt-5.3-codex"]
       },
       "oracle": {
-        "model": [
-          "openai/gpt-5.5"
-        ],
+        "model": ["openai/gpt-5.5"],
         "variant": "high"
       },
       "council": {
-        "model": [
-          "openai/gpt-5.5"
-        ]
+        "model": ["openai/gpt-5.5"]
       },
       "librarian": {
-        "model": [
-          "openai/gpt-5.4-mini-fast"
-        ],
+        "model": ["openai/gpt-5.4-mini-fast"],
         "variant": "low"
       },
       "explorer": {
-        "model": [
-          "openai/gpt-5.4-mini-fast"
-        ],
+        "model": ["openai/gpt-5.4-mini-fast"],
         "variant": "low"
       },
       "designer": {
-        "model": [
-          "openai/gpt-5.4-mini-fast"
-        ]
+        "model": ["openai/gpt-5.4-mini-fast"]
       },
       "fixer": {
-        "model": [
-          "openai/gpt-5.4-mini-fast"
-        ],
+        "model": ["openai/gpt-5.4-mini-fast"],
         "variant": "medium"
       }
     }
-  },
-  "multiplexer": {
-    "type": "auto",
-    "layout": "main-vertical",
-    "main_pane_size": 60
   },
   "council": {
     "timeout": 300000,
     "presets": {
       "default": {
         "alpha": {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/nemotron-3-ultra-free",
           "variant": "high"
         },
         "beta": {
-          "model": "opencode/north-mini-code-free",
+          "model": "opencode/big-pickle",
           "variant": "high"
         },
         "gamma": {
-          "model": "opencode/big-pickle",
+          "model": "opencode/mimo-v2.5-free",
           "variant": "high"
         }
       }
