@@ -64,7 +64,7 @@
         "variant": "medium"
       },
       "oracle": {
-        "model": "opencode/nemotron-3-ultra-free",
+        "model": "opencode/hy3-free",
         "variant": "high"
       },
       "council": {
@@ -151,7 +151,7 @@
         "variant": "high"
       },
       "fixer": {
-        "model": ["github-copilot/claude-sonnet-5"],
+        "model": ["github-copilot/kimi-k2.7-code"],
         "variant": "low"
       },
       "observer": {
@@ -202,7 +202,7 @@
           "variant": "high"
         },
         "gamma": {
-          "model": "opencode/mimo-v2.5-free",
+          "model": "opencode/hy3-free",
           "variant": "high"
         }
       }
