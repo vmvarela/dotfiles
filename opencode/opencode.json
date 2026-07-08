@@ -38,6 +38,11 @@
       "type": "local",
       "command": ["/opt/homebrew/bin/engram", "mcp", "--tools=agent"],
       "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--browserUrl=http://127.0.0.1:9222"],
+      "enabled": true
     }
   }
 }
