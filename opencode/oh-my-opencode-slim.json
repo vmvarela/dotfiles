@@ -72,11 +72,11 @@
         "variant": "high"
       },
       "librarian": {
-        "model": "opencode/north-mini-code-free",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "low"
       },
       "explorer": {
-        "model": "opencode/north-mini-code-free",
+        "model": "opencode/deepseek-v4-flash-free",
         "variant": "low"
       },
       "designer": {
@@ -94,11 +94,11 @@
     },
     "opencode-go": {
       "orchestrator": {
-        "model": "opencode-go/minimax-m3",
+        "model": "opencode-go/deepseek-v4-pro",
         "variant": "medium"
       },
       "oracle": {
-        "model": "opencode-go/deepseek-v4-pro",
+        "model": "opencode-go/glm-5.2",
         "variant": "max"
       },
       "council": {
@@ -106,11 +106,11 @@
         "variant": "high"
       },
       "librarian": {
-        "model": "opencode-go/mimo-v2.5",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low"
       },
       "explorer": {
-        "model": "opencode-go/mimo-v2.5",
+        "model": "opencode-go/deepseek-v4-flash",
         "variant": "low"
       },
       "designer": {
