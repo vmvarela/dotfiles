@@ -32,17 +32,178 @@
     }
   },
   "lsp": true,
-  "disabled_providers": ["openrouter"],
   "mcp": {
     "engram": {
       "type": "local",
-      "command": ["/opt/homebrew/bin/engram", "mcp", "--tools=agent"],
+      "command": ["engram", "mcp", "--tools=agent"],
       "enabled": true
     },
     "chrome-devtools": {
       "type": "local",
       "command": ["npx", "-y", "chrome-devtools-mcp@latest", "--browserUrl=http://127.0.0.1:9222"],
       "enabled": true
+    }
+  },
+  "provider": {
+    "omniroute": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "OmniRoute",
+      "options": {
+        "baseURL": "http://localhost:20128/v1",
+        "apiKey": "${OMNIROUTE_API_KEY}"
+      },
+      "models": {
+        "auto/best-coding": {
+          "name": "auto/best-coding"
+        },
+        "auto/best-reasoning": {
+          "name": "auto/best-reasoning"
+        },
+        "auto/best-fast": {
+          "name": "auto/best-fast"
+        },
+        "auto/best-vision": {
+          "name": "auto/best-vision"
+        },
+        "auto/best-chat": {
+          "name": "auto/best-chat"
+        },
+        "auto/best-coding-fast": {
+          "name": "auto/best-coding-fast"
+        },
+        "auto/pro-coding": {
+          "name": "auto/pro-coding"
+        },
+        "auto/pro-reasoning": {
+          "name": "auto/pro-reasoning"
+        },
+        "auto/pro-vision": {
+          "name": "auto/pro-vision"
+        },
+        "auto/pro-chat": {
+          "name": "auto/pro-chat"
+        },
+        "auto/pro-fast": {
+          "name": "auto/pro-fast"
+        },
+        "auto/coding": {
+          "name": "auto/coding"
+        },
+        "auto/fast": {
+          "name": "auto/fast"
+        },
+        "auto/chat": {
+          "name": "auto/chat"
+        },
+        "auto/cheap": {
+          "name": "auto/cheap"
+        },
+        "auto/offline": {
+          "name": "auto/offline"
+        },
+        "auto/smart": {
+          "name": "auto/smart"
+        },
+        "auto/claude-opus": {
+          "name": "auto/claude-opus"
+        },
+        "auto/claude-sonnet": {
+          "name": "auto/claude-sonnet"
+        },
+        "auto/best-free": {
+          "name": "auto/best-free"
+        },
+        "auto/coding:fast": {
+          "name": "auto/coding:fast"
+        },
+        "auto/coding:cheap": {
+          "name": "auto/coding:cheap"
+        },
+        "auto/coding:free": {
+          "name": "auto/coding:free"
+        },
+        "auto/coding:pro": {
+          "name": "auto/coding:pro"
+        },
+        "auto/coding:reliable": {
+          "name": "auto/coding:reliable"
+        },
+        "auto/reasoning": {
+          "name": "auto/reasoning"
+        },
+        "auto/reasoning:pro": {
+          "name": "auto/reasoning:pro"
+        },
+        "auto/vision": {
+          "name": "auto/vision"
+        },
+        "auto/multimodal": {
+          "name": "auto/multimodal"
+        },
+        "auto/glm": {
+          "name": "auto/glm"
+        },
+        "auto/minimax": {
+          "name": "auto/minimax"
+        },
+        "auto/mimo": {
+          "name": "auto/mimo"
+        },
+        "auto/zai": {
+          "name": "auto/zai"
+        },
+        "auto/gemma": {
+          "name": "auto/gemma"
+        },
+        "auto/llama": {
+          "name": "auto/llama"
+        },
+        "auto/gemini": {
+          "name": "auto/gemini"
+        },
+        "combo/orchestrator": {
+          "name": "combo/orchestrator"
+        },
+        "combo/explorer": {
+          "name": "combo/explorer"
+        },
+        "combo/librarian": {
+          "name": "combo/librarian"
+        },
+        "combo/oracle": {
+          "name": "combo/oracle"
+        },
+        "combo/designer": {
+          "name": "combo/designer"
+        },
+        "combo/fixer": {
+          "name": "combo/fixer"
+        },
+        "combo/observer": {
+          "name": "combo/observer"
+        },
+        "combo/council": {
+          "name": "combo/council"
+        },
+	"combo/nemotron-3-ultra": {
+          "name": "nemotron-3-ultra"
+	},
+	"combo/deepseek-v4-flash": {
+	  "name": "deepseek-v4-flash"
+	},
+	"combo/deepseek-v4-pro": {
+	  "name": "deepseek-v4-pro"
+	},
+	"combo/hy3": {
+	  "name": "hy3"
+	},
+	"combo/glm-5.2": {
+	  "name": "glm-5.2"
+	},
+	"combo/kimi-2.6": {
+	  "name": "kimi-2.6"
+	}
+      }
     }
   }
 }

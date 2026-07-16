@@ -4,7 +4,6 @@
     "/Users/victor/dev/vmvarela/opencode-quota",
     "@dietrichgebert/ponytail",
     "caveman-opencode-plugin",
-    "oh-my-opencode-slim",
-    "openslimedit@latest"
+    "oh-my-opencode-slim"
   ]
 }

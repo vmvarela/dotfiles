@@ -1,7 +1,33 @@
 {
-  "disabled_agents": [],
   "preset": "opencode-free",
+  "disabled_agents": [],
   "presets": {
+    "auto": {
+      "orchestrator": {
+        "model": "omniroute/combo/orchestrator"
+      },
+      "oracle": {
+        "model": "omniroute/combo/oracle"
+      },
+      "explorer": {
+        "model": "omniroute/combo/explorer"
+      },
+      "librarian": {
+        "model": "omniroute/combo/librarian"
+      },
+      "designer": {
+        "model": "omniroute/combo/designer"
+      },
+      "fixer": {
+        "model": "omniroute/combo/fixer"
+      },
+      "observer": {
+        "model": "omniroute/combo/observer"
+      },
+      "council": {
+        "model": "omniroute/combo/council"
+      }
+    },
     "nvidia-free": {
       "orchestrator": {
         "model": [
@@ -128,85 +154,112 @@
     },
     "github-copilot": {
       "orchestrator": {
-        "model": ["github-copilot/claude-sonnet-5"],
+        "model": [
+          "github-copilot/claude-sonnet-5"
+        ],
         "variant": "medium"
       },
       "oracle": {
-        "model": ["github-copilot/claude-sonnet-5"],
+        "model": [
+          "github-copilot/claude-sonnet-5"
+        ],
         "variant": "high"
       },
       "council": {
-        "model": ["github-copilot/claude-sonnet-5"]
+        "model": [
+          "github-copilot/claude-sonnet-5"
+        ]
       },
       "librarian": {
-        "model": ["github-copilot/raptor-mini"],
+        "model": [
+          "github-copilot/raptor-mini"
+        ],
         "variant": "low"
       },
       "explorer": {
-        "model": ["github-copilot/raptor-mini"],
+        "model": [
+          "github-copilot/raptor-mini"
+        ],
         "variant": "low"
       },
       "designer": {
-        "model": ["github-copilot/gemini-3.5-flash"],
+        "model": [
+          "github-copilot/gemini-3.5-flash"
+        ],
         "variant": "high"
       },
       "fixer": {
-        "model": ["github-copilot/kimi-k2.7-code"],
+        "model": [
+          "github-copilot/kimi-k2.7-code"
+        ],
         "variant": "low"
       },
       "observer": {
-        "model": ["github-copilot/gemini-3-flash-preview"],
+        "model": [
+          "github-copilot/gemini-3-flash-preview"
+        ],
         "variant": "low"
       }
     },
     "openai": {
       "orchestrator": {
-        "model": ["openai/gpt-5.6-sol"],
+        "model": [
+          "openai/gpt-5.6-sol"
+        ],
         "variant": "high"
       },
       "oracle": {
-        "model": ["openai/gpt-5.6-sol"],
+        "model": [
+          "openai/gpt-5.6-sol"
+        ],
         "variant": "high"
       },
       "council": {
-        "model": ["openai/gpt-5.6-sol"]
+        "model": [
+          "openai/gpt-5.6-sol"
+        ]
       },
       "librarian": {
-        "model": ["openai/gpt-5.6-luna"],
+        "model": [
+          "openai/gpt-5.6-luna"
+        ],
         "variant": "low"
       },
       "explorer": {
-        "model": ["openai/gpt-5.6-luna"],
+        "model": [
+          "openai/gpt-5.6-luna"
+        ],
         "variant": "low"
       },
       "designer": {
-        "model": ["openai/gpt-5.6-terra"],
+        "model": [
+          "openai/gpt-5.6-terra"
+        ],
         "variant": "medium"
       },
       "fixer": {
-        "model": ["openai/gpt-5.6-terra"],
+        "model": [
+          "openai/gpt-5.6-terra"
+        ],
         "variant": "low"
       }
     }
   },
   "council": {
-    "timeout": 300000,
     "presets": {
       "default": {
         "alpha": {
-          "model": "opencode/nemotron-3-ultra-free",
-          "variant": "high"
+          "model": "omniroute/combo/orchestrator"
         },
         "beta": {
-          "model": "opencode/big-pickle",
-          "variant": "high"
+          "model": "omniroute/combo/librarian"
         },
         "gamma": {
-          "model": "opencode/hy3-free",
-          "variant": "high"
+          "model": "omniroute/combo/oracle"
         }
       }
-    }
+    },
+    "default_preset": "default"
   },
   "todoContinuation": {
     "maxContinuations": 15,
