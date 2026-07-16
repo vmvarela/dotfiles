@@ -243,6 +243,15 @@
         ],
         "variant": "low"
       }
+    },
+    "mistral": {
+      "orchestrator": { "model": "mistral/mistral-medium-latest", "variant": "high", "skills": ["*"], "mcps": ["*", "!context7"] },
+      "oracle":       { "model": "mistral/mistral-large-latest", "variant": "xhigh", "skills": ["simplify"], "mcps": [] },
+      "librarian":    { "model": "mistral/mistral-small-latest", "variant": "low", "skills": [], "mcps": ["websearch", "context7", "gh_grep"] },
+      "explorer":     { "model": "mistral/mistral-small-latest", "variant": "low", "skills": [], "mcps": [] },
+      "designer":     { "model": "mistral/pixtral-12b", "variant": "medium", "skills": [], "mcps": [] },
+      "fixer":        { "model": "mistral/codestral-latest", "variant": "medium", "skills": [], "mcps": [] },
+      "observer":     { "model": "mistral/pixtral-large-latest", "variant": "max", "skills": [], "mcps": [] }
     }
   },
   "council": {
