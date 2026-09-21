@@ -3,7 +3,7 @@
   "plugin": [
     "@slkiser/opencode-quota@4.8.2",
     "@dietrichgebert/ponytail",
-    "oh-my-opencode-slim@2.2.19",
+    "oh-my-opencode-slim@2.2.22",
     "opencode-github-copilot-auto-model"
   ],
   "default_agent": "plan",
