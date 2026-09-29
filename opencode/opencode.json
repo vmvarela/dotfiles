@@ -1,51 +1,42 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugin": [
-    "file:///Users/victor/dev/vmvarela/opencode-quota/.slim/worktrees/opencode-zen-console-cli-auth/src/index.ts",
-    "@dietrichgebert/ponytail",
-    "oh-my-opencode-slim@2.2.24",
-    "opencode-github-copilot-auto-model"
+  "plugins": [
+    "-copilot-auto-model",
+    "oh-my-opencode-slim@2.2.25"
   ],
   "default_agent": "plan",
-  "small_model": "opencode/space-bunny-free",
   "share": "disabled",
-  "agent": {
+  "agents": {
     "explore": {
-      "disable": true
+      "disabled": true
     },
     "general": {
-      "disable": true
+      "disabled": true
     },
     "plan": {
-      "model": "opencode/mimo-v2.6-flash-free",
-      "variant": "high"
+      "model": "opencode/mimo-v2.6-flash-free#high"
     },
     "build": {
       "model": "opencode/mimo-v2.6-flash-free"
-    }
-  },
- "mcp": {
-    "engram": {
-      "type": "local",
-      "command": [
-        "engram",
-        "mcp",
-        "--tools=agent"
-      ],
-      "enabled": true
     },
-    "playwright": {
-      "type": "local",
-      "command": [
-        "npx",
-        "-y",
-        "@playwright/mcp@latest",
-        "--caps=core,network,vision"
-      ],
-      "enabled": true
+    "title": {
+      "model": "opencode/space-bunny-free"
     }
   },
-  "provider": {
+  "mcp": {
+    "servers": {
+      "playwright": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@playwright/mcp@latest",
+          "--caps=core,network,vision"
+        ]
+      }
+    }
+  },
+  "providers": {
     "copilot": {},
     "openai": {},
     "opencode-go": {},

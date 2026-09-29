@@ -6,16 +6,16 @@ OPENCODE_CONFIG="$HOME/.config/opencode"
 
 mkdir -p "$OPENCODE_CONFIG"
 
-for file in opencode.json oh-my-opencode-slim.json tui.json; do
-  target="$OPENCODE_CONFIG/$file"
-  source="$DOTFILES_DIR/opencode/$file"
+for entry in opencode.json oh-my-opencode-slim.json cli.json sounds; do
+  target="$OPENCODE_CONFIG/$entry"
+  source="$DOTFILES_DIR/opencode/$entry"
 
   if [ -L "$target" ]; then
     echo "Symlink already exists: $target"
-  elif [ -f "$target" ]; then
+  elif [ -e "$target" ]; then
     echo "Backing up $target to ${target}.bak"
-    cp "$target" "${target}.bak"
-    ln -sf "$source" "$target"
+    mv "$target" "${target}.bak"
+    ln -s "$source" "$target"
     echo "Linked: $target → $source"
   else
     ln -s "$source" "$target"
