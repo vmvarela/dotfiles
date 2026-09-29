@@ -1,0 +1,29 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "theme": {
+    "name": "catppuccin-frappe"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "auto",
+    "scrollbar": false,
+    "thinking": "show"
+  },
+  "animations": true,
+  "attention": {
+    "enabled": true,
+    "notifications": true,
+    "sound": true,
+    "volume": 0.35,
+    "sound_pack": "opencode.default",
+    "sounds": {
+      "done": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_al_ataque.mp3",
+      "subagent_done": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_te_das_cuen.mp3",
+      "permission": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_hombre_malo.mp3",
+      "question": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_camarerorrrlll.mp3",
+      "error": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_fuegorrrlll.mp3"
+    }
+  }
+}

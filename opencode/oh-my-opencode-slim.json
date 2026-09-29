@@ -9,7 +9,7 @@
       },
       "oracle": {
         "model": "openai/gpt-6-sol",
-        "variant": "high",
+        "variant": "high"
       },
       "council": {
         "model": [
