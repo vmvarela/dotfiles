@@ -16,7 +16,7 @@
     "enabled": true,
     "notifications": true,
     "sound": true,
-    "volume": 0.35,
+    "volume": 0.20000000000000015,
     "sound_pack": "opencode.default",
     "sounds": {
       "done": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_al_ataque.mp3",
@@ -25,5 +25,8 @@
       "question": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_camarerorrrlll.mp3",
       "error": "/Users/victor/.config/opencode/sounds/chiquito/chiquito_de_la_calzada_fuegorrrlll.mp3"
     }
+  },
+  "debug": {
+    "devtools": false
   }
 }

@@ -1,9 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "plugins": [
-    "-copilot-auto-model",
-    "oh-my-opencode-slim@2.2.25"
-  ],
   "default_agent": "plan",
   "share": "disabled",
   "agents": {
@@ -23,23 +19,19 @@
       "model": "opencode/space-bunny-free"
     }
   },
-  "mcp": {
-    "servers": {
-      "playwright": {
-        "type": "local",
-        "command": [
-          "npx",
-          "-y",
-          "@playwright/mcp@latest",
-          "--caps=core,network,vision"
-        ]
-      }
-    }
-  },
   "providers": {
     "copilot": {},
     "openai": {},
     "opencode-go": {},
     "opencode": {}
-  }
+  },
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
 }
