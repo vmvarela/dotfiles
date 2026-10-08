@@ -1,0 +1,8 @@
+// OpenCode Quota — global user config (all workspaces).
+// Applies to TUI; Web/Desktop get slash commands but no toasts.
+// Restart OpenCode after changing this file.
+{
+  "enableToast": false,
+  "formatStyle": "allWindows",
+  "opencodeGoWindows": ["rolling", "weekly", "monthly"]
+}
