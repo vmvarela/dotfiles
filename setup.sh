@@ -6,7 +6,7 @@ OPENCODE_CONFIG="$HOME/.config/opencode"
 
 mkdir -p "$OPENCODE_CONFIG"
 
-for entry in opencode.json cli.json sounds; do
+for entry in opencode.json cli.json sounds opencode-quota; do
   target="$OPENCODE_CONFIG/$entry"
   source="$DOTFILES_DIR/opencode/$entry"
 
