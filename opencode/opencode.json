@@ -1,37 +1,38 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "plan",
-  "share": "disabled",
   "agents": {
-    "explore": {
-      "disabled": true
-    },
-    "general": {
-      "disabled": true
-    },
     "plan": {
       "model": "opencode/mimo-v2.6-flash-free#high"
     },
     "build": {
       "model": "opencode/mimo-v2.6-flash-free"
-    },
-    "title": {
-      "model": "opencode/space-bunny-free"
     }
   },
-  "providers": {
+  "lsp": true,
+  "plugins": [],
+  "provider": {
     "copilot": {},
-    "openai": {},
-    "opencode-go": {},
     "opencode": {}
   },
-  "agent": {
-    "explore": {
-      "disable": true
-    },
-    "general": {
-      "disable": true
+  "mcp": {
+    "servers": {
+      "browsermcp": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@browsermcp/mcp@latest"
+        ]
+      },
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp/oauth"
+      },
+      "engram": {
+        "type": "local",
+        "command": ["engram", "mcp"]
+      }
     }
-  },
-  "lsp": true
+  }
+
 }
